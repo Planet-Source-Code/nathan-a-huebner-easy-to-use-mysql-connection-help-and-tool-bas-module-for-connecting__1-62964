@@ -1,0 +1,27 @@
+ÿŸIMPORTANT: IF YOU WANT THIS TO WORK!
+
+Even though you see that this code WILL work if your database is running, if 
+you EVER put this BAS into another project, you must first ADD the Microsoft 
+ADO Control to your Components, and then PUT the CONTROL onto a 
+FORM. After you put it on the form, delete it, as it has loaded what it needs. 
+Maybe there's a way around this, but I haven't tried to figure it out. This is just a 
+fix for this error. BUT DO NOT REMOVE IT FROM YOUR COMPONENTS, 
+OR THE BAS WILL NO LONGER WORK.
+
+Please note, the ADO control is already loaded into this project. Only follow these 
+instructions if you intend to use the BAS Module in a different project.
+
+ADD Microsoft ADO Control
+Create the control by placing it onto any form in your project.
+
+HOW TO ADD A COMPONENT (Microsoft ADO Control):
+From the file menu in Visual Basic, click Project > References
+A large list will appear, scroll down to Microsoft ADO Control, and Check it. Click OK and 
+then click and drag the control to any form in the project (it doesn't have to be any particular 
+form, we just need the control into the project).
+
+I have no idea why it doesn't work any other way, this is the only way I can do it.
+
+Then setup your User name, Server, Database, and to QUERY a database simply do: 
+QueryDatabase("SELECT count(*) from MYTABLE;")  this will return the count(*) for 
+MYTABLE, into getCell("count(*)",1). 
